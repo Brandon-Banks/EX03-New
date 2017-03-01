@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+// My basic comprehension of math is debilitating my ability to do this problem.
+// I have no idea what Cramer's Rule is, and I can't figure it out
+
+int main()
+{
+	double a;
+	double b;
+	double c;
+	double d;
+	double e;
+	double f;
+	double x;
+	double y;
+
+
+	cout << "Input a, b, c, and d: " << endl;
+	cin >> a, b, c, d, e, f, x, y;
+
+	if ((a * d) - (b * c))
+	{
+		cout << "The equation has no solution. " << endl;
+	}
+
+	x = ((e * d) - (b * f)) / ((a * d) - (b * c));
+	y = ((a * f) - (e * c)) / ((a * d) - (b * c));
+	e = (a * x) + (b * y);
+	f = (c * x) + (d * y);
+
+	cout << "x is " << x << endl;
+	cout << "y is " << y << endl;
+}
